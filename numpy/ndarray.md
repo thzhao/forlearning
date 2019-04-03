@@ -17,3 +17,11 @@ tile共有2个参数，A指待输入数组，reps则决定A重复的次数。整
 将reps扩充至与A相同的维度。扩充方法同上，也是向shape对应元组中添1，然后再进行重复。
 例如，4维数组A的shape为（2,3,4,5），而reps为（2,2）只有2维，那么就要对reps添维进行扩充，得到（1,1,2,2）
 （3）A.dim = d
+
+
+numpy.ndarray.strides
+存储数组的步长
+Imagine an array of 32-bit integers (each 4 bytes):
+
+x = np.array([[0, 1, 2, 3, 4],
+              [5, 6, 7, 8, 9]], dtype=np.int32)
